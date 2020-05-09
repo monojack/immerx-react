@@ -77,6 +77,8 @@ export default function Counter() {
 }
 ```
 
+[![Edit immerx-react-counter](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/immerx-react-counter-ie5ce?fontsize=14&hidenavigation=1&theme=dark)
+
 **NOTE:** Always memoize your lenses or define them outside the function if they're not derived from props, because the `state$` observable synchronously emits the current state value to incoming subscribers.
 
 Otherwise, the isolated `state` will emit an update
