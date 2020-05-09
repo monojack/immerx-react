@@ -1,0 +1,73 @@
+{
+  "name": "immerx-react",
+  "version": "0.0.0",
+  "description": "React bindings for immerx",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "dev": "npm run build:esm -- -w",
+    "dev:esm": "npm run build:esm -- -w",
+    "dev:cjs": "npm run build:cjs -- -w",
+    "pretest": "npm run build:cjs",
+    "test": "ava --verbose --color --serial",
+    "build:esm": "BABEL_ENV=esm babel src --out-dir esm",
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir cjs",
+    "build": "npm run build:cjs && npm run build:esm",
+    "prepare": "npm run clean && npm run build",
+    "clean": "rimraf cjs esm"
+  },
+  "ava": {
+    "files": [
+      "test/*.js",
+      "!test/mocks/**"
+    ],
+    "babel": true
+  },
+  "homepage": "https://github.com/monojack/immerx-react",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:monojack/immerx-react.git"
+  },
+  "bugs": "https://github.com/monojack/immerx-react/issues",
+  "npmName": "immerx-react",
+  "files": [
+    "esm",
+    "cjs"
+  ],
+  "author": "Ionut Achim <achimvionut@gmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "immerx",
+    "react",
+    "immer",
+    "fractal",
+    "observable",
+    "state"
+  ],
+  "sideEffects": false,
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "immer": "^6.0.3",
+    "immerx": "^2.1.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "immerx": ">=2.1.0",
+    "react": ">=16.8.0"
+  }
+}
