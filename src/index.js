@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback, useMemo } from 'react'
 import { create } from 'immerx'
 
 let state$
-export function createStore(initialState) {
-  state$ = create(initialState)
+export function createStore(initialState, middleware) {
+  state$ = create(initialState, middleware)
+  return state$
 }
 
 export function useImmerx(lens) {
