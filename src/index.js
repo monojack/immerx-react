@@ -27,7 +27,7 @@ export function useImmerx(lens) {
     })
 
     return () => sub.unsubscribe()
-  }, [lens, innerState$])
+  }, [innerState$])
 
   return [state, update]
 }
