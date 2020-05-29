@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import { create } from 'immerx'
+import { create as stateCreate } from '@immerx/state'
 
 let state$
-export function createStore(initialState, middleware) {
-  state$ = create(initialState, middleware)
+export function create(initialState, middleware) {
+  state$ = stateCreate(initialState, middleware)
   return state$
 }
 
@@ -36,3 +36,5 @@ export function noop() {}
 export function identity(x) {
   return x
 }
+
+export default create

@@ -1,5 +1,5 @@
 {
-  "name": "immerx-react",
+  "name": "@immerx/react",
   "version": "0.2.1",
   "description": "React bindings for immerx",
   "main": "cjs/index.js",
@@ -29,7 +29,6 @@
     "url": "git@github.com:monojack/immerx-react.git"
   },
   "bugs": "https://github.com/monojack/immerx-react/issues",
-  "npmName": "immerx-react",
   "files": [
     "esm",
     "cjs"
@@ -51,6 +50,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-proposal-optional-chaining": "^7.10.1",
     "@babel/preset-env": "^7.10.1",
+    "@immerx/state": "^3.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
@@ -61,13 +61,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "immer": "^6.0.9",
-    "immerx": "^3.1.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "rimraf": "^3.0.2"
   },
   "peerDependencies": {
-    "immerx": ">=2.1.0",
+    "@immerx/state": ">=3.2.1",
     "react": ">=16.8.0"
   }
 }

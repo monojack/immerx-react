@@ -1,6 +1,7 @@
-## ImmerX-React
+<img src="images/immerx-react-logo.svg" height="70px"/>
 
-React bindings for [ImmerX](https://github.com/monojack/immerx)
+**React** bindings for [ImmerX](https://github.com/monojack/immerx)
+
 <br/>
 
 ### `Basic usage`
@@ -12,13 +13,13 @@ The following example assumes that you are already familiar with **ImmerX**
 ```js
 import React from 'react'
 import { render } from 'react-dom'
-import { createStore } from 'immerx-react'
+import { create } from '@immerx/react'
 
 import App from './App'
 
 import './styles.css'
 
-createStore({
+create({
   counter: { count: 0 },
   times: 0,
 })
@@ -31,7 +32,7 @@ render(<App />, rootElement)
 
 ```js
 import React from 'react'
-import { useImmerx } from 'immerx-react'
+import { useImmerx } from '@immerx/react'
 
 import Counter from './Counter'
 
@@ -51,7 +52,7 @@ export default function App() {
 
 ```js
 import React from 'react'
-import { useImmerx } from 'immerx-react'
+import { useImmerx } from '@immerx/react'
 
 const lens = {
   get: state => state.counter,
