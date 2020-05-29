@@ -63,7 +63,9 @@
     "immer": "^6.0.9",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
-    "rimraf": "^3.0.2"
+    "read-pkg": "^5.2.0",
+    "rimraf": "^3.0.2",
+    "write-pkg": "^4.0.0"
   },
   "peerDependencies": {
     "@immerx/state": ">=3.2.1",
